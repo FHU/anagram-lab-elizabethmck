@@ -5,17 +5,20 @@ def anagram(list1, list2):
     list2 = list2.upper()
     list2 = list2.replace(" ","")
 
-    
-    list1 = []
-    for i in list1:
-        list1.append(i)
-    
-    for i in list1:
-        if i in list2:
-            continue
-        else:
-            return False
-    return True
+    if list1 == " ":
+        return False
+    else:
+        list1 = []
+        
+        for i in list1:
+            list1.append(i)
+            
+        for i in list1:
+            if i in list2:
+                continue
+            else:
+                return False
+        return True
 
 
 if __name__ == '__main__':
